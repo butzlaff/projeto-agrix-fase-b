@@ -1,11 +1,13 @@
 package com.betrybe.agrix.controller.dto;
 
 import com.betrybe.agrix.entity.Crops;
+import java.time.LocalDate;
 
 /**
  * Crops Dto to creation.
  */
-public record CropsDtoCreation(String name, Double plantedArea) {
+public record CropsDtoCreation(String name, Double plantedArea, 
+    LocalDate plantedDate, LocalDate harvestDate) {
   /**
    * Generates an instance of the Crops entity without the associated Farm.
    *
@@ -15,6 +17,8 @@ public record CropsDtoCreation(String name, Double plantedArea) {
     Crops crops = new Crops();
     crops.setName(name);
     crops.setPlantedArea(plantedArea);
+    crops.setPlantedDate(plantedDate);
+    crops.setHarvestDate(harvestDate);
     return crops;
   }
 } 

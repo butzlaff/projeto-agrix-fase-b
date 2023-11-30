@@ -74,6 +74,7 @@ public class FarmController {
   public CropsDto createCrops(@RequestBody CropsDto crops, @PathVariable("id") long id)
       throws FarmNotFoundException {
     Crops cropsCreated = cropsService.createCrops(crops.toEntity(), id);
+    System.out.printf("Crops created: %s", crops);
     return CropsDto.fromEntity(cropsCreated);
   }
 
