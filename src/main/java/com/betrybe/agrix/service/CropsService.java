@@ -6,6 +6,7 @@ import com.betrybe.agrix.repository.CropsRepository;
 import com.betrybe.agrix.service.exceptions.CropsNotFoundException;
 import com.betrybe.agrix.service.exceptions.FarmNotFoundException;
 import java.util.List;
+import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,5 +49,9 @@ public class CropsService {
 
   public List<Crops> findAll() {
     return cropsRepository.findAll();
+  }
+
+  public List<Crops> findByHarvestDateBetween(LocalDate start, LocalDate end) {
+    return cropsRepository.findByHarvestDateBetween(start, end);
   }
 }
