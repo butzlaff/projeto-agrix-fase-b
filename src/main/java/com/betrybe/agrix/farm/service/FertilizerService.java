@@ -1,13 +1,11 @@
 package com.betrybe.agrix.farm.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.betrybe.agrix.farm.entity.Fertilizer;
 import com.betrybe.agrix.farm.repository.FertilizerRepository;
 import com.betrybe.agrix.farm.service.exceptions.FertilizerNotFoundException;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Service for Fertilizar.
@@ -27,12 +25,14 @@ public class FertilizerService {
   public Fertilizer saveFertilizer(Fertilizer fertilizer) {
     return fertilizerRepository.save(fertilizer);
   }
+
   /**
    * Find a fertilizer by id.
    */
   public Fertilizer findById(Long id) throws FertilizerNotFoundException {
     return fertilizerRepository.findById(id).orElseThrow(FertilizerNotFoundException::new);
   }
+  
   /**
    * Find and returns a list of all Fertiliziers.
    */
