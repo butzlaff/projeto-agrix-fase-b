@@ -1,8 +1,8 @@
-package com.betrybe.agrix.service;
+package com.betrybe.agrix.farm.service;
 
-import com.betrybe.agrix.entity.Farm;
-import com.betrybe.agrix.repository.FarmRepository;
-import com.betrybe.agrix.service.exceptions.FarmNotFoundException;
+import com.betrybe.agrix.farm.entity.Farm;
+import com.betrybe.agrix.farm.repository.FarmRepository;
+import com.betrybe.agrix.farm.service.exceptions.FarmNotFoundException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

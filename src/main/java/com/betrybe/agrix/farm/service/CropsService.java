@@ -1,10 +1,10 @@
-package com.betrybe.agrix.service;
+package com.betrybe.agrix.farm.service;
 
-import com.betrybe.agrix.entity.Crops;
-import com.betrybe.agrix.entity.Farm;
-import com.betrybe.agrix.repository.CropsRepository;
-import com.betrybe.agrix.service.exceptions.CropsNotFoundException;
-import com.betrybe.agrix.service.exceptions.FarmNotFoundException;
+import com.betrybe.agrix.farm.entity.Crops;
+import com.betrybe.agrix.farm.entity.Farm;
+import com.betrybe.agrix.farm.repository.CropsRepository;
+import com.betrybe.agrix.farm.service.exceptions.CropsNotFoundException;
+import com.betrybe.agrix.farm.service.exceptions.FarmNotFoundException;
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

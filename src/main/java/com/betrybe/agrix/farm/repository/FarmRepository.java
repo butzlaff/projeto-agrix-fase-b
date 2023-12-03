@@ -1,6 +1,6 @@
-package com.betrybe.agrix.repository;
+package com.betrybe.agrix.farm.repository;
 
-import com.betrybe.agrix.entity.Farm;
+import com.betrybe.agrix.farm.entity.Farm;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

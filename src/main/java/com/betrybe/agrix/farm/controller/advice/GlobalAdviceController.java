@@ -1,6 +1,6 @@
-package com.betrybe.agrix.controller.advice;
+package com.betrybe.agrix.farm.controller.advice;
 
-import com.betrybe.agrix.service.exceptions.NotFoundException;
+import com.betrybe.agrix.farm.service.exceptions.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

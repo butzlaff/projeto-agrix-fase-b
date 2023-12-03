@@ -1,9 +1,9 @@
-package com.betrybe.agrix.controller;
+package com.betrybe.agrix.farm.controller;
 
-import com.betrybe.agrix.controller.dto.CropsDto;
-import com.betrybe.agrix.entity.Crops;
-import com.betrybe.agrix.service.CropsService;
-import com.betrybe.agrix.service.exceptions.CropsNotFoundException;
+import com.betrybe.agrix.farm.controller.dto.CropsDto;
+import com.betrybe.agrix.farm.entity.Crops;
+import com.betrybe.agrix.farm.service.CropsService;
+import com.betrybe.agrix.farm.service.exceptions.CropsNotFoundException;
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

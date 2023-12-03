@@ -1,4 +1,4 @@
-package com.betrybe.agrix.entity;
+package com.betrybe.agrix.farm.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -1,4 +1,4 @@
-package com.betrybe.agrix.service.exceptions;
+package com.betrybe.agrix.farm.service.exceptions;
 
 /**
  * Throws exception when farm is not found.
