@@ -7,7 +7,6 @@ import com.betrybe.agrix.farm.repository.CropsRepository;
 import com.betrybe.agrix.farm.service.exceptions.CropsNotFoundException;
 import com.betrybe.agrix.farm.service.exceptions.FarmNotFoundException;
 import com.betrybe.agrix.farm.service.exceptions.FertilizerNotFoundException;
-
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +21,9 @@ public class CropsService {
   private final FertilizerService fertilizerService;
   private final FarmService farmService;
 
+  /**
+   * Constructor.
+   */
   @Autowired
   public CropsService(CropsRepository cropsRepository, 
       FarmService farmService, FertilizerService fertilizerService) {
@@ -61,6 +63,9 @@ public class CropsService {
     return cropsRepository.findByHarvestDateBetween(start, end);
   }
 
+  /**
+   * Associates a Fertilizer to a Crops.
+   */
   public Crops associateFertilizer(Long id, Long fertilizerId)
       throws CropsNotFoundException, FertilizerNotFoundException {
     Crops crops = findCrops(id);

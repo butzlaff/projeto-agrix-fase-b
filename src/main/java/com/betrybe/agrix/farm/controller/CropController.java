@@ -1,11 +1,12 @@
 package com.betrybe.agrix.farm.controller;
 
 import com.betrybe.agrix.farm.controller.dto.CropsDto;
+import com.betrybe.agrix.farm.controller.dto.FertilizerDto;
 import com.betrybe.agrix.farm.entity.Crops;
+import com.betrybe.agrix.farm.entity.Fertilizer;
 import com.betrybe.agrix.farm.service.CropsService;
 import com.betrybe.agrix.farm.service.exceptions.CropsNotFoundException;
 import com.betrybe.agrix.farm.service.exceptions.FertilizerNotFoundException;
-
 import java.time.LocalDate;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,6 +68,9 @@ public class CropController {
         .toList();
   }
   
+  /**
+   * Associate Fertilizer to Crops.
+   */
   @PostMapping("{cropId}/fertilizers/{fertilizerId}")
   @ResponseStatus(HttpStatus.CREATED)
   public String associateCropsToFertilizer(@PathVariable("cropId") Long cropId, 
@@ -74,5 +78,17 @@ public class CropController {
       FertilizerNotFoundException {
     cropsService.associateFertilizer(cropId, fertilizerId);
     return "Fertilizante e plantação associados com sucesso!";
+  }
+
+  /**
+   * Find Crops with Fertilizer.
+   */
+  @GetMapping("{cropId}/fertilizers")
+  @ResponseStatus(HttpStatus.OK)
+  public List<FertilizerDto> findCropsWithFertilizer(@PathVariable("cropId") Long cropId)
+      throws CropsNotFoundException {
+    Crops crops = cropsService.findCrops(cropId);
+    List<Fertilizer> fertilizers = crops.getFertilizers();
+    return fertilizers.stream().map(FertilizerDto::fromEntity).toList();
   }
 }
