@@ -4,7 +4,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
+import java.util.List;
 
 /**
  * Fertilizers Entity.
@@ -36,9 +38,20 @@ public class Fertilizer {
     this.composition = composition;
   }
 
+  @ManyToMany(mappedBy = "fertilizers")
+  List<Crops> crops;
+
   /**
    * Getters and setters.
    */
+
+  public List<Crops> getCrops() {
+    return crops;
+  }
+
+  public void setCrops(List<Crops> crops) {
+    this.crops = crops;
+  }
 
   public Long getId() {
     return id;

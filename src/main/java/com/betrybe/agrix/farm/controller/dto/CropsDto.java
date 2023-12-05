@@ -34,5 +34,4 @@ public record CropsDto(Long id, String name, Double plantedArea, Long farmId,
     crops.setPlantedDate(plantedDate);
     return crops;
   }
-
 }
