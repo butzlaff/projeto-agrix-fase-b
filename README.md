@@ -5,12 +5,9 @@
 
 Projeto desenvolvido durante o curso de Desenvolvimento Web Full-Stack da Trybe, período de Eletiva Java.
 
-Api utilizando as técnicas que aprendi durante o curso.
-
 A proposta de Api é de um Gerenciador de Fazendas Simples.
 
-Utilizamos Java 17, Java Spring Boot, Maven, Sprint Boot Security, JUniter para Testes.
-
+**Api utilizando as técnicas que aprendi durante o curso, utilizando tecnologias como:** Java 17, Java Spring Boot, Maven, Sprint Boot Security, JUniter para Testes.
 
 ## Autor
 
